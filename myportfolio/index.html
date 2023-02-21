@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Abdulkafiy Abdulkabir">
+  <meta http-equiv="refresh" content="20; url=light-navbar.html">
+  <title>Loading...</title>
+  <style>
+
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Ubuntu',sans-serif;
+    }
+
+    .loader-container
+    {
+      min-height: 100vh;
+      background-color: #292929;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .loader
+    {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      background-color: transparent;
+      border: 10px solid #008080;
+      border-top: 10px solid #dcdcdc;
+      border-right: 10px solid #dcdcdc;
+      animation: animate 300ms linear infinite;
+      transform-origin: top bottom;
+      overflow: hidden;
+      position: fixed;
+    }
+    @keyframes animate
+    {
+      0%
+      {
+        transform: rotate(0deg);
+      }
+      100%
+      {
+        transform: rotate(360deg);
+      }
+    }
+
+    .text
+    {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 30px;
+      top: 60%;
+      position: absolute;
+    }
+
+    .text::before
+    {
+      content: 'Loading...';
+      position: relative;
+      animation: textChanger 2s linear infinite;
+    }
+
+    @keyframes textChanger
+    {
+      0%
+      {
+        content: 'Please Wait';
+      }
+      100%
+      {
+        content: 'Page Loading...';
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class='loader-container'>
+  <div class='loader'></div>
+  <span class='text'></span>
+  </div>
+
+</body>
+</html>
