@@ -1,0 +1,91 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Microsoft Sans Serif',sans-serif;
+}
+
+.container
+{
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	background: lightgray;
+}
+
+.container > form
+{
+	max-width: 500px;
+	border-radius: 7px;
+	background: white;
+	padding: 20px;
+	box-shadow: 0px 0px 4px #9c9c9c;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.container > form > input
+{
+	display: block;
+	width: 400px;
+	padding: 15px 20px;
+	border-radius: 7px;
+	border: solid 1px #dcdcdc;
+	margin: 1.5%;
+	font-size: 1em;
+	outline: none;
+	z-index: 999;
+}
+
+.container > form > [type="submit"]
+{
+	background: #3366ff;
+	font-weight: 500;
+	font-size: 1.2em;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.container > form > a.forgot
+{
+	color: #1e90ff;
+	padding-top: 1em;
+	padding-bottom: 1.3em;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.container > form > hr
+{
+	width: 100%;
+	border: none;
+	height: 1px;
+	background: #dcdcdc;
+	margin-bottom: 1.3em;
+}
+
+.container > form > a.crt
+{
+	background: #2eb82e;
+	font-size: 1em;
+	color: #ffffff;
+	width: 200px;
+	text-align: center;
+	padding: 15px 10px;
+	border-radius: 7px;
+	font-weight: 500;
+	text-decoration: none;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.container > form > input[type="text"]:focus,input[type="password"]:focus
+{
+	border: solid 1px #1e90ff;
+}
