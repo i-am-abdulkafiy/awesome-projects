@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+/* Text Decoration */
+a
+{
+    text-decoration: none;
+}
+
+/* Header */
+header
+{
+    background-color: #252525;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+    justify-content: space-between;
+}
+
+/* Open Menu */
+.menu
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 37px;
+    height: 37px;
+    border-radius: 100px;
+    background-color: transparent;
+    cursor: pointer;
+    top: 0;
+}
+.menu:hover
+{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.menu .line
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 2px;
+    background-color: #ffffff;
+}
+.menu .line:nth-child(2)
+{
+    transform: translateY(-6px);
+}
+
+.menu .line:nth-child(3)
+{
+    transform: translateY(6px);
+}
+
+/* Close Menu */
+.menu-close
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 37px;
+    height: 37px;
+    border-radius: 100px;
+    cursor: pointer;
+    top: 0;
+    float: right;
+    margin-top: 2px;
+}
+
+.menu-close .line
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 2px;
+    background-color: #dcdcdc;
+}
+
+.menu-close .line:nth-child(1)
+{
+    transform: translateY(-4px)rotate(45deg);
+}
+.menu-close .line:nth-child(2)
+{
+    transform: translateY(6px)rotate(-45deg);
+}
+
+/* Push Off Canvas Navigation */
+.sidenav
+{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 456ms ease-out;
+    background-color: #272727;
+}
+
+.sidenav .nav-links
+{
+    display: block;
+    padding-top: 60px;
+    line-height: 50px;
+}
+.sidenav li
+{
+    list-style-type: none;
+    padding-left: 0.8em;
+}
+.sidenav .nav-links li a
+{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    padding: 0.4em 0.4em;
+}
+.sidenav .nav-links li:hover
+{
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Main */
+.main
+{
+    padding: 40px;
+    transition: margin-left .5s ease-out;
+    min-height: 100vh;
+    padding-block: 9em;
+}
+
+
+/* Brand */
+.brand
+{
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+/* Footer */
+footer
+{
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+footer p
+{
+    color: #ffffff;
+    font-size: 1em;
+}
